@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		346FF3132995ACE1007FA4CA /* BookListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346FF3122995ACE1007FA4CA /* BookListTableViewController.swift */; };
+		346FF3162995B106007FA4CA /* BookListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346FF3152995B106007FA4CA /* BookListTableViewCell.swift */; };
 		419B178027987EBC00423A18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419B177F27987EBC00423A18 /* AppDelegate.swift */; };
 		419B178227987EBC00423A18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419B178127987EBC00423A18 /* SceneDelegate.swift */; };
 		419B178727987EBC00423A18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 419B178527987EBC00423A18 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		346FF3122995ACE1007FA4CA /* BookListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListTableViewController.swift; sourceTree = "<group>"; };
+		346FF3152995B106007FA4CA /* BookListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListTableViewCell.swift; sourceTree = "<group>"; };
 		419B177C27987EBC00423A18 /* BookStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		419B177F27987EBC00423A18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		419B178127987EBC00423A18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,8 +43,17 @@
 			isa = PBXGroup;
 			children = (
 				346FF3122995ACE1007FA4CA /* BookListTableViewController.swift */,
+				346FF3172995B160007FA4CA /* Custom View Cell */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		346FF3172995B160007FA4CA /* Custom View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				346FF3152995B106007FA4CA /* BookListTableViewCell.swift */,
+			);
+			path = "Custom View Cell";
 			sourceTree = "<group>";
 		};
 		416F0D412798D773002D4080 /* Controller */ = {
@@ -195,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				419B178027987EBC00423A18 /* AppDelegate.swift in Sources */,
+				346FF3162995B106007FA4CA /* BookListTableViewCell.swift in Sources */,
 				419B178227987EBC00423A18 /* SceneDelegate.swift in Sources */,
 				346FF3132995ACE1007FA4CA /* BookListTableViewController.swift in Sources */,
 			);
