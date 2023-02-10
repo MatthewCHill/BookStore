@@ -22,3 +22,9 @@ class Book{
         self.synopsis = synopsis
     }
 }
+
+extension Book: Equatable {
+    static func == (lhs: Book, rhs: Book) -> Bool {
+        return lhs.lastUpdated == rhs.lastUpdated
+    }
+}
