@@ -12,6 +12,10 @@ class BookListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
 
     // MARK: - Table view data source
 
@@ -24,11 +28,11 @@ class BookListTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath) as? BookListTableViewCell else {return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath) as? BookTableViewCell else {return UITableViewCell()}
 
         // Configure the cell...
         let book = BookController.sharedInstance.books[indexPath.row]
-        cell.updateViews(bookDisplayed: book)
+        cell.updateView(book: book)
         return cell
     }
     

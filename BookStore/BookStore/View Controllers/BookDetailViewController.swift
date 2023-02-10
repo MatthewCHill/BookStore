@@ -17,6 +17,7 @@ class BookDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateView()
 
     }
     
@@ -24,21 +25,39 @@ class BookDetailViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func saveButtonTapped(_ sender: Any) {
+        guard let author = bookAuthorTextField.text,
+              let title = bookTitleTextField.text,
+              let rating = bookRatingTextField.text,
+              let synopsis = bookSynopsisTextView.text else {return}
+        
+        if let book = book {
+            BookController.sharedInstance.updateBook(bookToUpdate: book, newTitle: title, newAuthor: author, newRating: Double(rating) ?? 0.0, newSynopsis: synopsis)
+        } else {
+            BookController.sharedInstance.createBook(title: title, author: author, rating: Double(rating) ?? 0.0, synopsis: synopsis)
+        }
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func clearButtonTapped(_ sender: Any) {
+        resetView()
     }
     
+    // MARK: - Helper Functions
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func updateView() {
+        guard let book = book else {return}
+        bookTitleTextField.text = book.title
+        bookAuthorTextField.text = book.author
+        bookRatingTextField.text = "\(book.rating)"
+        bookSynopsisTextView.text = book.synopsis
     }
-    */
+    
+    func resetView() {
+        bookRatingTextField.text = ""
+        bookSynopsisTextView.text = ""
+        bookTitleTextField.text = ""
+        bookAuthorTextField.text = ""
+    }
+    
 
 }
