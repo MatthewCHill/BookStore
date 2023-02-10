@@ -62,6 +62,12 @@
                                         <constraint firstItem="wCj-rQ-2gH" firstAttribute="leading" secondItem="HXC-pq-tCj" secondAttribute="leading" constant="2" id="lYm-iZ-Spw"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bookAuthorLabel" destination="2RR-PK-ogO" id="3Cw-Fe-8YJ"/>
+                                    <outlet property="bookRatingLabel" destination="J7v-qs-WVv" id="qgs-27-feY"/>
+                                    <outlet property="bookTitleLabel" destination="bKZ-Lb-nM8" id="7pN-FT-5ZR"/>
+                                    <segue destination="A2K-EK-OB9" kind="show" identifier="bookCell" id="bsj-Nt-evt"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -72,7 +78,7 @@
                     <navigationItem key="navigationItem" id="ev9-IG-Hyz">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="tIl-7j-cAf">
                             <connections>
-                                <segue destination="A2K-EK-OB9" kind="show" id="qWW-jD-rGt"/>
+                                <segue destination="A2K-EK-OB9" kind="show" identifier="bookCell" id="qWW-jD-rGt"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -206,6 +212,9 @@
             <point key="canvasLocation" x="160.86956521739131" y="16.741071428571427"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qWW-jD-rGt"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="kaneki for about me" width="225" height="225"/>
         <systemColor name="labelColor">

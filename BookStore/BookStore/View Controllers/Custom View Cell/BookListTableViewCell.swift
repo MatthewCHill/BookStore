@@ -7,17 +7,15 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class BookListTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var bookTitleLabel: UILabel!
+    @IBOutlet weak var bookRatingLabel: UILabel!
+    @IBOutlet weak var bookAuthorLabel: UILabel!
+    
+    func updateViews(bookDisplayed: Book) {
+        bookTitleLabel.text = bookDisplayed.title
+        bookRatingLabel.text = "\(bookDisplayed.rating)"
+        bookAuthorLabel.text = bookDisplayed.author
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

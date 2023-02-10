@@ -19,8 +19,10 @@ class BookDetailViewController: UIViewController {
         super.viewDidLoad()
 
     }
-    // MARK: - Actions
     
+    var book: Book?
+    
+    // MARK: - Actions
     @IBAction func saveButtonTapped(_ sender: Any) {
     }
     
