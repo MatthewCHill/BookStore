@@ -81,26 +81,24 @@
             </objects>
             <point key="canvasLocation" x="1071.0144927536232" y="16.741071428571427"/>
         </scene>
-        <!--View Controller-->
+        <!--Book Detail View Controller-->
         <scene sceneID="NkW-te-wKT">
             <objects>
-                <viewController id="A2K-EK-OB9" sceneMemberID="viewController">
+                <viewController id="A2K-EK-OB9" customClass="BookDetailViewController" customModule="BookStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="16I-xt-aOq">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us about this book..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lE-o6-nOa">
-                                <rect key="frame" x="8" y="111" width="414" height="33.666666666666657"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clipboard" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vAE-0A-p5o">
-                                <rect key="frame" x="94.666666666666686" y="163.33333333333331" width="241" height="22.333333333333314"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kaneki for about me" translatesAutoresizingMaskIntoConstraints="NO" id="vAE-0A-p5o">
+                                <rect key="frame" x="165" y="164.66666666666666" width="100" height="99.999999999999972"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vAE-0A-p5o" secondAttribute="height" multiplier="1:1" id="8ef-3V-3DW"/>
+                                    <constraint firstAttribute="height" constant="100" id="Yni-vh-dfn"/>
+                                </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Mt-o1-wgu">
-                                <rect key="frame" x="10" y="195" width="410" height="76"/>
+                                <rect key="frame" x="10" y="274.66666666666669" width="410" height="76"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fIh-g4-GU7">
                                         <rect key="frame" x="0.0" y="0.0" width="410" height="34"/>
@@ -125,20 +123,29 @@
                                 </subviews>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="paH-gZ-WSc">
-                                <rect key="frame" x="10" y="274.99999999999994" width="410" height="570.66666666666652"/>
+                                <rect key="frame" x="10" y="354.66666666666674" width="410" height="491"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agY-XD-OED">
-                                <rect key="frame" x="10" y="853.66666666666663" width="410" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agY-XD-OED">
+                                <rect key="frame" x="10" y="853.66666666666663" width="410" height="34.333333333333371"/>
                                 <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Clear"/>
+                                <connections>
+                                    <action selector="clearButtonTapped:" destination="A2K-EK-OB9" eventType="touchUpInside" id="8iQ-63-a2f"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us about this book..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lE-o6-nOa">
+                                <rect key="frame" x="8" y="111" width="414" height="33.666666666666657"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iHo-ss-Qhd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -159,12 +166,22 @@
                             <constraint firstItem="iHo-ss-Qhd" firstAttribute="bottom" secondItem="agY-XD-OED" secondAttribute="bottom" constant="10" id="qtN-Qo-JZe"/>
                             <constraint firstItem="vAE-0A-p5o" firstAttribute="centerX" secondItem="iHo-ss-Qhd" secondAttribute="centerX" id="sZR-OC-caH"/>
                             <constraint firstItem="vAE-0A-p5o" firstAttribute="top" secondItem="0lE-o6-nOa" secondAttribute="bottom" constant="20" id="vfO-vh-Lrb"/>
-                            <constraint firstItem="vAE-0A-p5o" firstAttribute="width" secondItem="16I-xt-aOq" secondAttribute="height" multiplier="60:233" constant="1" id="xly-WL-pMY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ARM-1S-5hk">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="6T9-hk-9Oy"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="6T9-hk-9Oy">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="A2K-EK-OB9" id="YIS-2c-U1K"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bookAuthorTextField" destination="E8r-PR-Cey" id="Ekv-bm-l93"/>
+                        <outlet property="bookRatingTextField" destination="dZb-A6-Whw" id="3g1-r6-W5T"/>
+                        <outlet property="bookSynopsisTextView" destination="paH-gZ-WSc" id="E1m-4b-DMb"/>
+                        <outlet property="bookTitleTextField" destination="fIh-g4-GU7" id="Dw1-Gq-C1c"/>
+                        <outlet property="clearButton" destination="agY-XD-OED" id="VC0-h5-faT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ny-5f-cIQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -190,7 +207,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="clipboard" catalog="system" width="103" height="128"/>
+        <image name="kaneki for about me" width="225" height="225"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
